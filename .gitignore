@@ -17,3 +17,5 @@ build/
 dist/
 venv/
 
+# extras
+arq.pdf
