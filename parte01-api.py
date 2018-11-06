@@ -1,58 +1,53 @@
-from flask import request
-from flask_api import FlaskAPI, status, exceptions
-import time
+from flask import Flask, request
+from flask_api import FlaskAPI, status
+from time import sleep
+import datetime
 
-# contrução de uma instancia da class Flask
-app = FlaskAPI(__name__)
+# create the flask object
+app = Flask(__name__)
 
-products = {
-    0: 'mesa',
-    1: 'cadeira'
-}
+# saved json and time
+datas_registered = []
+times_registered = []
+datas_split = []
+times_split = []
 
-def note_repr(key):
-    return {
-        'id': key,
-        'name': products[key]
-    }
-
-# route p todos os products e para updates
-@app.route("/chaordic.com.br/v1/products/", methods=['GET', 'POST'])
-def products_list():
-    """
-    List or create products.
-    """
-
-
+@app.route('/chaordic.com.br/v1/products/', methods=['POST'])
+def post_route():
     if request.method == 'POST':
-        note = str(request.data.get('text', ''))
-        idx = max(products.keys()) + 1
-        products[idx] = note
-        return note_repr(idx), status.HTTP_201_CREATED
+        # get json
+        data = request.get_json(force=True)
+        # get time 
+        minute = datetime.datetime.now().minute
+        
+        # 
+        buffer_10min()
 
-    # request.method == 'GET'
-    return [note_repr(idx) for idx in sorted(products.keys())]
+        if data in datas_split:
+            return f"{status.HTTP_403_FORBIDDEN} Forbidden\n "
+        else:
+            datas_registered.append(data)
+            times_registered.append(minute)
+        return f"{status.HTTP_201_CREATED} OK\ndatas={datas_registered}\ndatas_split={datas_split}\ntimes={times_registered}\n"
 
 
-@app.route("/chaordic.com.br/v1/products/<int:key>/", methods=['GET', 'PUT', 'DELETE'])
-def products_detail(key):
-    """
-    Retrieve, update or delete note instances.
-    """
-    if request.method == 'PUT':
-        note = str(request.data.get('text', ''))
-        products[key] = note
-        return note_repr(key)
+def buffer_10min():
+    # percorre times_registered
+    for i in times_registered: 
+        index_decr = (len(times_registered) - times_registered.index(i)) - 1 # -1 pois index começa com 0
+        elem_atual = times_registered[index_decr]
+        elem_ultimo = times_registered[-1]
+        diferenca = elem_ultimo - elem_atual
 
-    elif request.method == 'DELETE':
-        products.pop(key, None)
-        return '', status.HTTP_204_NO_CONTENT
-
-    # request.method == 'GET'
-    if key not in products:
-        raise exceptions.NotFound()
-    return note_repr(key)
-
+        # ultimos 10 min 
+        if diferenca < 1:
+            times_split.append(elem_atual)
+            datas_split.append(datas_registered[index_decr])
+        else:
+            times_split.pop(index_decr)
+            datas_split.pop(index_decr)
+            break # garante que não vai comparar todos os elementos
+                   
 
 
 
