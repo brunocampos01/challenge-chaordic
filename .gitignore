@@ -16,6 +16,8 @@ docs/_build/
 build/
 dist/
 venv/
+.idea/
+.vscode/
 
 # extras
 arq.pdf
