@@ -15,6 +15,8 @@ Descidi usar Flask (Python) porque ele é um microframework, o que garante que t
 - O desenvolvimento da aplicação foi feito no *virtual environment* do Python. No término do desenvolvimento, salvei todos os requeriments utilizados no arquivo *requeriments.txt*
 ### Containers
 - Utilizei docker
+`sudo docker build -t part-1 .`<br/>
+
 
 
 ## Cluster
