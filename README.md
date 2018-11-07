@@ -4,7 +4,7 @@
 Descidi usar Flask (Python) porque ele é um microframework, o que garante que terei somente o essencial para rodar a aplicação.
 
 ### Run app
-`python3 parte01-api.py`
+`python3 parte01-api.py`<br/>
 **OBS:** não alcancei a melhor solução. A negação de request ocorre a partir da análise da última request armazenada.
 
 ### Test
@@ -16,8 +16,7 @@ Descidi usar Flask (Python) porque ele é um microframework, o que garante que t
 ### Containers
 - Utilizei docker
 `sudo docker build -t part-1 .`<br/>
-
-
+`sudo docker run -d -p 5000:5000 part-1`
 
 ## Cluster
 - Mesos
