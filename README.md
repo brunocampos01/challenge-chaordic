@@ -1,7 +1,7 @@
 # Challenge Chaordic
 
 ## API
-Descidi usar Flask (Python) porque ele é um microframework, o que garante que terei somente o essencial para rodar a aplicação.
+Descidi usar Flask (Python) porque ele é um microframework, o que garante que terei somente o essencial para rodar a API.
 
 ### Run app
 `python3 parte01-api.py`<br/>
