@@ -15,7 +15,7 @@ Parte01 - API de produtos
 **OBS:** o ambiente tambem foi dockerizado
 
 ## API
-Decidi usar Flask (Python) porque ele é um microframework, o que garante que terei somente o essencial para rodar a API.
+Decidi usar Flask (Python) porque ele é um microframework, o que garante que terei somente o essencial para rodar um método post na API.
 
 ### Running 
 1. Abra o terminal e clone o repositório: <br/>
