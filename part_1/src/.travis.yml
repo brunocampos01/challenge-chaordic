@@ -1,0 +1,20 @@
+# Linguagem Utilizada para Desenvolver a Aplicação
+language: python
+
+# Versão que a aplicação suporta.
+python:
+  - "3.6.6"
+
+sudo: required
+install:
+  - pip install flask
+
+# Defini o script de Teste
+script:
+  - python3 tests.py
+
+# Defini que o processo de Deploy será na Plataforma Heroku. 
+deploy:
+  provider: chaordic
+  api-key: 
+    secure: $HEROKU_API_KEY
