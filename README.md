@@ -28,7 +28,7 @@ Decidi usar Flask (Python) porque ele é um microframework, o que garante que te
 
 3. Execute testes de requisição (POST) na aplicação,
 - com testes automatizados:<br/>
-`cd challenge-chaordic/part_1/test`<br/>
+`cd challenge-chaordic/part_1/src`<br/>
 `python3 tests.py`<br/>
 
 - a partir de um outro terminal:</br>
@@ -38,7 +38,7 @@ Decidi usar Flask (Python) porque ele é um microframework, o que garante que te
 #### Dependences
 - O desenvolvimento da aplicação foi feito no *virtual environment* do Python. No término do desenvolvimento, salvei todos os requeriments utilizados no arquivo *requeriments.txt*
 #### Containers
-Dockerizei para criar um ambiente uniforme para clusterizar.
+O ambiente foi dockerizado afim de garantir a uniformidade e facilitar a clusterização.
 - Build container (Dockerfile):<br/>
 `sudo docker build -t part_1 .`<br/>
 
