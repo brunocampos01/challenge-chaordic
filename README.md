@@ -29,7 +29,7 @@ Decidi usar Flask (Python) porque ele é um microframework, o que garante que te
 - a partir de um outro terminal:</br>
 `curl -XPOST http:/127.0.0.1:5000/chaordic.com.br/v1/products/ -d '[{"id": "123", "name": "mesa"}]'`<br/>
 
-- com testes automatizados:
+- com testes automatizados:<br/>
 `cd challenge-chaordic/part_1/test`<br/>
 `python3 tests.py`<br/>
 
