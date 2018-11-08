@@ -24,7 +24,6 @@ Decidi usar Flask (Python) porque ele é um microframework, o que garante que te
 `cd challenge-chaordic/part_1/src`
 2. Execute o arquivo part_1.py para inicializar o servidor:<br/>
 `python3 part_1.py`<br/>
-**OBS:** não alcancei a melhor solução. A negação de request ocorre a partir da análise da última request armazenada.
 
 3. Execute testes de requisição (POST) na aplicação,
 - com testes automatizados:<br/>
