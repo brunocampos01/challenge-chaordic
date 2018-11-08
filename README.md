@@ -12,6 +12,7 @@ Parte01 - API de produtos
 `sudo apt-get install python-pip`
 - Bibliotecas:<br/>
 `pip install -r requirements.txt`<br/>
+
 **OBS:** o ambiente tambem foi dockerizado
 
 ## API
