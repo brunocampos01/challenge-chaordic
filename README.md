@@ -26,13 +26,13 @@ Decidi usar Flask (Python) porque ele é um microframework, o que garante que te
 `python3 part_1.py`<br/>
 **OBS:** não alcancei a melhor solução. A negação de request ocorre a partir da análise da última request armazenada.
 
-3. Execute testes na aplicação,
-- a partir de um outro terminal:</br>
-`curl -XPOST http:/127.0.0.1:5000/chaordic.com.br/v1/products/ -d '[{"id": "123", "name": "mesa"}]'`<br/>
-
+3. Execute testes de requisição (POST) na aplicação,
 - com testes automatizados:<br/>
 `cd challenge-chaordic/part_1/test`<br/>
 `python3 tests.py`<br/>
+
+- a partir de um outro terminal:</br>
+`curl -XPOST http:/127.0.0.1:5000/chaordic.com.br/v1/products/ -d '[{"id": "123", "name": "mesa"}]'`<br/>
 
 ## Deploy
 #### Dependences
