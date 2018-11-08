@@ -21,7 +21,7 @@ def post_route():
         if len(times_registered) == 0:
             times_registered.append(minute)
             datas_registered.append(data)
-            return f"{status.HTTP_201_CREATED} OK\ndatas_split={datas_registered}\n\ntimes_split={times_registered}\n"
+            return f"{status.HTTP_201_CREATED} OK\n"
         
         # get diferença de tempo, entre o ultimo elemento na lista com o minute atual
         difference = minute - times_registered[-1]
