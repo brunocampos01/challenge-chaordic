@@ -34,11 +34,11 @@ def post_route():
         elif data in datas_registered and difference > 10:
             datas_registered.append(data)
             times_registered.append(minute)
-            return f"{status.HTTP_201_CREATED} OK\n\ndatas_split={datas_registered}\n\ntimes_split={times_registered}\n"
+            return f"{status.HTTP_201_CREATED} OK\n"
         else:
             datas_registered.append(data)
             times_registered.append(minute)
-        return f"{status.HTTP_201_CREATED} OK\n\ndatas_split={datas_registered}\n\ntimes_split={times_registered}\n"
+        return f"{status.HTTP_201_CREATED} OK\n"
 
 
 if __name__ == "__main__":
