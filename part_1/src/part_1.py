@@ -25,15 +25,15 @@ def post_route():
             
             if difference <=10:
                 print('Forbidden')
-                return f"{status.HTTP_403_FORBIDDEN} Forbidden\n\n{times_registered}\n{datas_registered}\nposition_data={position}\nminute={minute}\ndifference={difference}\n" 
+                return f"{status.HTTP_403_FORBIDDEN} Forbidden\n" 
             else:
                 datas_registered.append(data)
                 times_registered.append(minute)
-                return f"{status.HTTP_201_CREATED} OK\n (difference > 1)\n\n{times_registered}\n{datas_registered}\nposition_data={position}\nminute={minute}\ndifference={difference}\n"
+                return f"{status.HTTP_201_CREATED} OK\n"
         else:
             datas_registered.append(data)
             times_registered.append(minute)
-        return f"{status.HTTP_201_CREATED} OK\n (data not in)\n{times_registered}\n{datas_registered}\n"
+        return f"{status.HTTP_201_CREATED} OK\n"
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
