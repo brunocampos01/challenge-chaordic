@@ -1,6 +1,6 @@
+import datetime
 from flask import Flask, request
 from flask_api import FlaskAPI, status
-import datetime
 
 # flask object
 app = Flask(__name__)

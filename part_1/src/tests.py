@@ -1,7 +1,9 @@
 import unittest
+
 import requests
-import part_1 
 from flask import Flask
+
+import part_1
 
 part_1 = Flask('part_1')
 
