@@ -6,12 +6,14 @@ Parte01 - API de produtos
 ### Pre Requirements:
 - Python 3.6 ou superior:<br/>
 `sudo apt-get install python3.6`
-- Git:<br/>
-`sudo apt-get install git`
 - pip:<br/>
 `sudo apt-get install python-pip`
 - Bibliotecas:<br/>
 `pip install -r requirements.txt`<br/>
+- Curl:<br/>
+`sudo apt-get -y install curl`
+- Git:<br/>
+`sudo apt-get install git`
 
 **OBS:** o ambiente tambem foi dockerizado
 
