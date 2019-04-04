@@ -37,7 +37,7 @@ cd challenge-chaordic/part_1/src
 - com testes automatizados:<br/>
 ```
 cd challenge-chaordic/part_1/test; \
-python3 tests.py`
+python3 tests.py
 ```
 
 - a partir de um outro terminal:</br>
