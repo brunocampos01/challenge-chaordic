@@ -33,10 +33,10 @@ cd challenge-chaordic/part_1/src
 2. Execute o arquivo part_1.py para inicializar o servidor:<br/>
 `python3 part_1.py`<br/>
 
-3. Execute testes de requisição (POST) na aplicação,
+3. Execute **testes** de requisição (POST) na aplicação,
 - com testes automatizados:<br/>
 ```
-cd challenge-chaordic/part_1/src; \
+cd challenge-chaordic/part_1/test; \
 python3 tests.py`
 ```
 
