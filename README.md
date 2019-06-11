@@ -3,7 +3,7 @@
 ### About
 Parte01 - API de produtos
 
-### Pre Requirements:
+### Requirements
 - Python 3.6 ou superior:<br/>
 `sudo apt-get install python3.6`
 - pip:<br/>
