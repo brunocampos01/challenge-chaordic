@@ -49,7 +49,7 @@ python3 tests.py
 #### Containers
 O ambiente foi dockerizado afim de garantir a uniformidade e facilitar a clusterização.
 - Docker install:<br/>
-`sudo apt-get install docker`<br/>
+`sudo apt-get install docker.io`<br/>
 
 - Build container (Dockerfile):<br/>
 `sudo docker build -t part_1 .`<br/>
